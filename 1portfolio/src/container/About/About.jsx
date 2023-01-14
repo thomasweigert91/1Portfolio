@@ -1,7 +1,7 @@
 import React from 'react'
 import "./About.scss"
 import {motion} from "framer-motion"
-import { useState, useEffect } from 'react'
+import  {AppWrap}  from '../../wrapper'
 import { images } from '../../constants'
 
 const About = () => {
@@ -38,4 +38,4 @@ const abouts = [
   )
 }
 
-export default About
+export default AppWrap(About, "about");
