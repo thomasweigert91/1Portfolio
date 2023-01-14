@@ -7,7 +7,7 @@ import { images } from '../../constants'
 const About = () => {
 const abouts = [
   {title: "Frontend Development", description: "My main skill and passion. I love to program and design applications and websites. In doing so, I always try new things to achieve the best possible result and constantly evolve.", imgUrl: images.about01},
-  {title: "BackEnd", description: "I have mastered the basics of the backend and will continue to expand on this topic!", imgUrl:images.about02}
+  {title: "Backend Development", description: "I have mastered the basics of the backend and will continue to expand on this topic!", imgUrl:images.about02}
 ]
 
   return (
