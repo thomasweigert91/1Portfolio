@@ -5,7 +5,6 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import {motion} from "framer-motion";
 import { useState, useEffect } from 'react';
 
-import { images } from '../../constants';
 
 const Work = () => {
 

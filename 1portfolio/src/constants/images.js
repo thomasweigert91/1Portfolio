@@ -68,5 +68,5 @@ export default {
   profile,
   circle,
   logo,
-  picture
+  picture,
 };
