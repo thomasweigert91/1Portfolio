@@ -6,7 +6,7 @@ export const db = [
         description: "A mobile fitness tracker App",
         projectLink: "https://capstoneproject-mu.vercel.app/",
         codeLink: "https://github.com/thomasweigert91/capstoneproject",
-        imgUrl: images.about01,
+        imgUrl: images.trainify,
         tags: ["Mobile App", "React JS", "All"],
 },
 {

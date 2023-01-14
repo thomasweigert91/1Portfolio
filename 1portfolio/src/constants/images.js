@@ -17,6 +17,11 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import next from '../assets/next.png';
+import mongodb from '../assets/mongodb.png';
+import trainify from '../assets/trainify.png';
+import linkedin from '../assets/linkedin.png';
+import xing from '../assets/xing.png';
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -26,17 +31,18 @@ import about04 from '../assets/about04.png';
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
+import picture from "../assets/pictureprofile.png"
+import sc from "../assets/styled-components.svg"
 
-import adidas from '../assets/adidas.png';
-import amazon from '../assets/amazon.png';
-import asus from '../assets/asus.png';
-import bolt from '../assets/bolt.png';
-import nb from '../assets/nb.png';
-import skype from '../assets/skype.png';
-import spotify from '../assets/spotify.png';
 
 export default {
   email,
+  xing,
+  linkedin,
+  trainify,
+  sc,
+  mongodb,
+  next,
   mobile,
   api,
   cpp,
@@ -62,11 +68,5 @@ export default {
   profile,
   circle,
   logo,
-  adidas,
-  amazon,
-  asus,
-  bolt,
-  nb,
-  skype,
-  spotify,
+  picture
 };

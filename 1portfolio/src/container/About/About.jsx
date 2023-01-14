@@ -1,13 +1,13 @@
 import React from 'react'
 import "./About.scss"
 import {motion} from "framer-motion"
-import  {AppWrap}  from '../../wrapper'
+import { AppWrap, MotionWrap } from '../../wrapper';
 import { images } from '../../constants'
 
 const About = () => {
 const abouts = [
-  {title: "FrontEnd", description: "I am a good web developer!", imgUrl: images.about01},
-  {title: "BackEnd", description: "I am a good web developer!", imgUrl:images.about02}
+  {title: "Frontend Development", description: "My main skill and passion. I love to program and design applications and websites. In doing so, I always try new things to achieve the best possible result and constantly evolve.", imgUrl: images.about01},
+  {title: "BackEnd", description: "I have mastered the basics of the backend and will continue to expand on this topic!", imgUrl:images.about02}
 ]
 
   return (
@@ -38,4 +38,8 @@ const abouts = [
   )
 }
 
-export default AppWrap(About, "about");
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'about',
+  'app__whitebg',
+);

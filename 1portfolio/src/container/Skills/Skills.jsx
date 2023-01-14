@@ -1,23 +1,19 @@
 import React from 'react';
 import "./Skills.scss";
-import {AppWrap} from "../../wrapper"
+import { AppWrap, MotionWrap } from '../../wrapper';
 import {motion} from "framer-motion";
-import { useState, useEffect } from 'react';
-import {ReactTooltip} from "react-tooltip"
+import { useState } from 'react';
+import {Tooltip} from 'react-tooltip';
+import { dbSkills } from './dbSkills';
+import { dbExperience } from './dbExperience';
+
 
 const Skills = () => {
 
-  const [experiences, setExperiences] = useState([])
-  const [skills, setSkills] = useState([])
-
-
-  useEffect(() => {
-    import('./dbSkills').then(({db}) => {
-        setSkills(db);
-       
-    })
-}, []);
-
+  const [experiences, setExperiences] = useState(dbExperience)
+  const [skills, setSkills] = useState(dbSkills)
+  
+  console.log(setSkills, setExperiences)
 
   return (
     <>
@@ -25,7 +21,7 @@ const Skills = () => {
 
     <div className="app__skills-container">
       <motion.div className="app__skills-list">
-        {skills.map((skill) => (
+        {skills?.map((skill) => (
           <motion.div
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.5 }}
@@ -43,7 +39,7 @@ const Skills = () => {
         ))}
       </motion.div>
       <div className="app__skills-exp">
-        {experiences.map((experience) => (
+        {experiences?.map((experience) => (
           <motion.div
             className="app__skills-exp-item"
             key={experience.year}
@@ -52,7 +48,7 @@ const Skills = () => {
               <p className="bold-text">{experience.year}</p>
             </div>
             <motion.div className="app__skills-exp-works">
-              {experience.works.map((work) => (
+              {experience?.works?.map((work) => (
                 <>
                   <motion.div
                     whileInView={{ opacity: [0, 1] }}
@@ -65,14 +61,14 @@ const Skills = () => {
                     <h4 className="bold-text">{work.name}</h4>
                     <p className="p-text">{work.company}</p>
                   </motion.div>
-                  <ReactTooltip
-                    id={work.name}
-                    effect="solid"
-                    arrowColor="#fff"
-                    className="skills-tooltip"
-                  >
-                    {work.desc}
-                  </ReactTooltip>
+                  <Tooltip
+                      id={work.name}
+                      effect="solid"
+                      arrowColor="#fff"
+                      className="skills-tooltip"
+                    >
+                      {work.desc}
+                    </Tooltip>
                 </>
               ))}
             </motion.div>
@@ -84,4 +80,8 @@ const Skills = () => {
 );
 };
 
-export default Skills
+export default AppWrap(
+  MotionWrap(Skills, 'app__skills'),
+  'skills',
+  'app__whitebg',
+);
