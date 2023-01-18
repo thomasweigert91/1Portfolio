@@ -33,10 +33,12 @@ import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
 import picture from "../assets/pictureprofile.png"
 import sc from "../assets/styled-components.svg"
+import CryptoApp from "../assets/CryptoApp.png"
 
 
 export default {
   email,
+  CryptoApp,
   xing,
   linkedin,
   trainify,
